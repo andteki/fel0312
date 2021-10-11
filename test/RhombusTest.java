@@ -29,4 +29,26 @@ public class RhombusTest {
 
         assertEquals(expectedRadius, actualRadius, 0.01);
     }
+    @Test
+    void calcRadiusOneTest() {
+        double side = 1;
+        double alpha = 1;
+        double expectedRadius = 0.0087;
+
+        double actualRadius = this.rhombus.calcRadius(side, alpha);
+
+        assertEquals(expectedRadius, actualRadius, 0.0001);
+    }
+    @Test
+    void calcRadiusTopAngleTest() {
+        double side = 30;
+        double alpha = 179;
+        double expectedRadius = 0.26;
+
+        double actualRadius = this.rhombus.calcRadius(side, alpha);
+
+        assertEquals(expectedRadius, actualRadius, 0.01);
+    }
+
+
 }
